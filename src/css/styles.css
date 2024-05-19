@@ -5,8 +5,6 @@
   |============================
 */
 @import url('./reset.css');
-@import url('./vite-promo.css');
-@import url('./header.css');
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
@@ -23,3 +21,118 @@
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
 }
+
+.error-text {
+  color: white;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.5;
+letter-spacing: 0.03em;
+}
+
+.error-svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+
+.error-remark {
+  display: flex;
+}
+
+.search-sec {
+  padding-top: 36px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.search-sec input {
+  border: 1px solid rgb(128, 128, 128);
+  padding: 8px 16px;
+  border-radius: 4px;
+  background: rgb(255, 255, 255);
+  transition: all 250ms ease-in-out;
+}
+
+.search-sec input:hover {
+  border: 1px solid #000;
+}
+
+.search-sec input:focus {
+  outline: none;
+  border: 1px solid #4e75ff;
+}
+
+.search-sec button {
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  background: rgb(78, 117, 255);
+  transition: all 250ms ease-in-out;
+}
+
+.search-sec button:hover {
+  background: #6c8cff;
+}
+
+#gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+#gallery > div {
+  border: 1px solid #808080;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.load-more {
+  display: flex;
+  margin: 20px auto;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.is-visible {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
